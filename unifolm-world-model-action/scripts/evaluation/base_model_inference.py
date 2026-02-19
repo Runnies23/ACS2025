@@ -13,8 +13,8 @@ from tqdm import tqdm
 from einops import rearrange, repeat
 from collections import OrderedDict
 
-from unifolm_wma.models.samplers.ddim import DDIMSampler
-from unifolm_wma.utils.utils import instantiate_from_config
+from unifolm_wma_run.models.samplers.ddim import DDIMSampler
+from unifolm_wma_run.utils.utils import instantiate_from_config
 
 
 def get_filelist(data_dir: str, postfixes: list[str]) -> list[str]:

@@ -24,8 +24,9 @@ export XFORMERS_FORCE_DISABLE_TRITON=1
 /mnt/ASC1664/miniconda3/envs/unifolm-wma/bin/python -c "import torch; print(torch.cuda.is_available())"
 
 PYTHON=/mnt/ASC1664/miniconda3/envs/unifolm-wma/bin/python
-ckpt=/mnt/ASC1664/unifolm-wma-0-dual/checkpoints/UnifoLM-WMA-0-Dual/unifolm_wma_dual.ckpt
-config=/mnt/ASC1664/unifolm-wma-0-dual/unifolm-world-model-action/configs/inference/world_model_interaction.yaml
+# ckpt=/mnt/ASC1664/unifolm-wma-0-dual/checkpoints/UnifoLM-WMA-0-Dual/unifolm_wma_dual.ckpt
+ckpt=/mnt/ASC1664/unifolm-wma-0-dual/ASC26-Embodied-World-Model-Optimization/ckpts/unifolm_wma_dual.ckpt
+config=/mnt/ASC1664/run_workspace/unifolm-world-model-action/configs/inference/world_model_interaction.yaml
 res_dir="/mnt/$USER/results"
 seed=123
 model_name=testing

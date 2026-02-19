@@ -19,8 +19,8 @@ from fastapi.responses import JSONResponse
 from typing import Any, Dict, Optional, Tuple, List
 from datetime import datetime
 
-from unifolm_wma.utils.utils import instantiate_from_config
-from unifolm_wma.models.samplers.ddim import DDIMSampler
+from unifolm_wma_run.utils.utils import instantiate_from_config
+from unifolm_wma_run.models.samplers.ddim import DDIMSampler
 
 
 def get_device_from_parameters(module: nn.Module) -> torch.device:

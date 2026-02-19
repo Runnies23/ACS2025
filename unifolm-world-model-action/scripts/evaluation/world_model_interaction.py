@@ -22,8 +22,8 @@ from torch import Tensor
 from torch.utils.tensorboard import SummaryWriter
 from PIL import Image
 
-from unifolm_wma.models.samplers.ddim import DDIMSampler
-from unifolm_wma.utils.utils import instantiate_from_config
+from unifolm_wma_run.models.samplers.ddim import DDIMSampler
+from unifolm_wma_run.utils.utils import instantiate_from_config
 from contextlib import contextmanager
 
 try:

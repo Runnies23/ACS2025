@@ -1,0 +1,87 @@
+Switching to group 'render' and re-executing...
+True
+2.9.1+rocm7.1.1.git351ff442
+[I 2026-02-16 11:04:25.513 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-02-16 11:04:25.532 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-02-16 11:04:25.551 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-02-16 11:04:25.570 ServerApp] notebook | extension was successfully linked.
+[I 2026-02-16 11:04:26.452 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-02-16 11:04:26.517 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-02-16 11:04:26.524 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-02-16 11:04:26.533 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-02-16 11:04:26.545 LabApp] JupyterLab extension loaded from /mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/jupyterlab
+[I 2026-02-16 11:04:26.551 LabApp] JupyterLab application directory is /mnt/ASC1664/miniconda3/envs/unifolm-wma/share/jupyter/lab
+[I 2026-02-16 11:04:26.555 LabApp] Extension Manager is 'pypi'.
+[I 2026-02-16 11:04:26.661 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-02-16 11:04:26.669 ServerApp] notebook | extension was successfully loaded.
+[I 2026-02-16 11:04:26.675 ServerApp] Serving notebooks from local directory: /mnt/ASC1664/run_workspace
+[I 2026-02-16 11:04:26.678 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2026-02-16 11:04:26.680 ServerApp] http://wx-ms-w7900d-0032:8888/tree?token=56a589c860f69a52a1434bc8d8db2565498e428315c71f0d
+[I 2026-02-16 11:04:26.683 ServerApp]     http://127.0.0.1:8888/tree?token=56a589c860f69a52a1434bc8d8db2565498e428315c71f0d
+[I 2026-02-16 11:04:26.686 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2026-02-16 11:04:26.697 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/ASC1664/.local/share/jupyter/runtime/jpserver-971733-open.html
+    Or copy and paste one of these URLs:
+        http://wx-ms-w7900d-0032:8888/tree?token=56a589c860f69a52a1434bc8d8db2565498e428315c71f0d
+        http://127.0.0.1:8888/tree?token=56a589c860f69a52a1434bc8d8db2565498e428315c71f0d
+[I 2026-02-16 11:04:26.758 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2026-02-16 11:05:19.474 ServerApp] Kernel started: 124a8294-0c07-4d1e-9719-de48ddb2ef60
+[IPKernelApp] WARNING | File not found: '/home/ASC1664/.vscode-server/data/User/workspaceStorage/bff1e76cb6fa716990dc9b98182477a0/ms-python.python/pythonrc.py'
+[I 2026-02-16 11:05:21.367 ServerApp] Adapting from protocol version 5.3 (kernel 124a8294-0c07-4d1e-9719-de48ddb2ef60) to 5.4 (client).
+[I 2026-02-16 11:05:21.374 ServerApp] Connecting to kernel 124a8294-0c07-4d1e-9719-de48ddb2ef60.
+[W 2026-02-16 11:05:21.380 ServerApp] The websocket_ping_timeout (90000) cannot be longer than the websocket_ping_interval (30000).
+    Setting websocket_ping_timeout=30000
+[I 2026-02-16 11:05:23.135 ServerApp] Adapting from protocol version 5.3 (kernel 124a8294-0c07-4d1e-9719-de48ddb2ef60) to 5.4 (client).
+[I 2026-02-16 11:05:23.170 ServerApp] Connecting to kernel 124a8294-0c07-4d1e-9719-de48ddb2ef60.
+[I 2026-02-16 11:05:23.775 ServerApp] Kernel started: 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874
+[IPKernelApp] WARNING | File not found: '/home/ASC1664/.vscode-server/data/User/workspaceStorage/bff1e76cb6fa716990dc9b98182477a0/ms-python.python/pythonrc.py'
+[I 2026-02-16 11:05:25.009 ServerApp] Adapting from protocol version 5.3 (kernel 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874) to 5.4 (client).
+[I 2026-02-16 11:05:25.013 ServerApp] Connecting to kernel 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874.
+[I 2026-02-16 11:05:29.139 ServerApp] Adapting from protocol version 5.3 (kernel 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874) to 5.4 (client).
+[I 2026-02-16 11:05:29.145 ServerApp] Connecting to kernel 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874.
+[IPKernelApp] ERROR | Exception in message handler:
+Traceback (most recent call last):
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/ipykernel/kernelbase.py", line 478, in dispatch_shell
+    await result
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/ipykernel/ipkernel.py", line 372, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/ipykernel/kernelbase.py", line 857, in execute_request
+    reply_msg: dict[str, t.Any] = self.session.send(  # type:ignore[assignment]
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/jupyter_client/session.py", line 867, in send
+    stream.send_multipart(to_send, copy=copy)
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/zmq/sugar/socket.py", line 749, in send_multipart
+    self.send(msg, zmq.SNDMORE | flags, copy=copy, track=track)
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/zmq/sugar/socket.py", line 698, in send
+    return super().send(data, flags=flags, copy=copy, track=track)
+  File "zmq/backend/cython/_zmq.py", line 1152, in zmq.backend.cython._zmq.Socket.send
+  File "zmq/backend/cython/_zmq.py", line 1194, in zmq.backend.cython._zmq.Socket.send
+  File "zmq/backend/cython/_zmq.py", line 1339, in zmq.backend.cython._zmq._check_closed
+zmq.error.ZMQError: Socket operation on non-socket
+[I 2026-02-16 11:05:54.662 ServerApp] Kernel restarted: 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874
+[I 2026-02-16 11:05:54.914 ServerApp] Starting buffering for 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874:fb7c94ff-0ba2-4bf2-8b85-9fcc4377cb0f
+[I 2026-02-16 11:05:55.373 ServerApp] Adapting from protocol version 5.3 (kernel 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874) to 5.4 (client).
+[I 2026-02-16 11:05:55.379 ServerApp] Connecting to kernel 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874.
+[I 2026-02-16 11:05:55.385 ServerApp] Restoring connection for 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874:fb7c94ff-0ba2-4bf2-8b85-9fcc4377cb0f
+[IPKernelApp] WARNING | File not found: '/home/ASC1664/.vscode-server/data/User/workspaceStorage/bff1e76cb6fa716990dc9b98182477a0/ms-python.python/pythonrc.py'
+[I 2026-02-16 11:07:23.658 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 11:09:24.751 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 11:11:26.078 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 11:13:27.198 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 11:15:28.013 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 11:21:28.868 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 11:23:29.830 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 11:25:30.731 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 11:37:31.666 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 13:01:33.400 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 13:03:35.308 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 13:18:54.575 ServerApp] Kernel interrupted: 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874
+[I 2026-02-16 13:19:40.578 ServerApp] Saving file at /Untitled.ipynb
+[I 2026-02-16 13:23:45.848 ServerApp] Saving file at /Untitled.ipynb
+slurmstepd-wx-ms-w7900d-0032: error: *** JOB 4116 ON wx-ms-w7900d-0032 CANCELLED AT 2026-02-16T13:26:33 ***
+[C 2026-02-16 13:26:33.917 ServerApp] received signal 15, stopping
+[I 2026-02-16 13:26:33.920 ServerApp] Shutting down 5 extensions
+[I 2026-02-16 13:26:33.924 ServerApp] Shutting down 2 kernels
+[I 2026-02-16 13:26:33.927 ServerApp] Kernel shutdown: 124a8294-0c07-4d1e-9719-de48ddb2ef60
+[I 2026-02-16 13:26:33.930 ServerApp] Kernel shutdown: 4cd8c0cd-a4f5-4844-b9c6-59b1c6894874

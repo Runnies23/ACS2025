@@ -41,13 +41,6 @@ datasets=("unitree_z1_stackbox")
 n_iters=(12)
 fses=(4)
 
-# Load ROCm
-module load rocm
-
-# Start GPU monitoring in background
-watch -n 1 rocm-smi > gpu_usage.log &
-GPU_MONITOR_PID=$!
-
 cd /mnt/ASC1664/unifolm-wma-0-dual_run_workspace/unifolm-world-model-action
 
 for i in "${!datasets[@]}"; do
@@ -78,8 +71,5 @@ for i in "${!datasets[@]}"; do
         --guidance_rescale 0.7 \
         --perframe_ae
 done
-
-# Stop monitoring
-kill $GPU_MONITOR_PID
 
 echo "All jobs completed!"

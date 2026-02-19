@@ -7,9 +7,9 @@ from transformers import logging as transf_logging
 from pytorch_lightning import seed_everything
 from pytorch_lightning.trainer import Trainer
 
-from unifolm_wma.utils.utils import instantiate_from_config
-from unifolm_wma.utils.train import get_trainer_callbacks, get_trainer_logger, get_trainer_strategy
-from unifolm_wma.utils.train import set_logger, init_workspace, load_checkpoints, get_num_parameters
+from unifolm_wma_run.utils.utils import instantiate_from_config
+from unifolm_wma_run.utils.train import get_trainer_callbacks, get_trainer_logger, get_trainer_strategy
+from unifolm_wma_run.utils.train import set_logger, init_workspace, load_checkpoints, get_num_parameters
 
 
 def get_parser(**parser_kwargs):

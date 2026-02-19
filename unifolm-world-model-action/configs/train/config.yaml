@@ -2,7 +2,7 @@ model:
   pretrained_checkpoint: /path/to/pretrained/checkpoint
   base_learning_rate: 1.0e-05
   scale_lr: False
-  target: unifolm_wma.models.ddpms.LatentVisualDiffusion
+  target: unifolm_wma_run.models.ddpms.LatentVisualDiffusion
   params:
     rescale_betas_zero_snr: True
     parameterization: "v"
@@ -45,7 +45,7 @@ model:
     dp_use_ema: True
 
     dp_ema_config:
-      target: unifolm_wma.models.diffusion_head.ema_model.EMAModel
+      target: unifolm_wma_run.models.diffusion_head.ema_model.EMAModel
       params:
         update_after_step: 0
         inv_gamma: 1.0
@@ -74,7 +74,7 @@ model:
         weight_decay: 1.0e-6
 
     wma_config:
-      target: unifolm_wma.modules.networks.wma_model.WMAModel
+      target: unifolm_wma_run.modules.networks.wma_model.WMAModel
       params:
         in_channels: 8
         out_channels: 4
@@ -111,7 +111,7 @@ model:
         base_model_gen_only: False
 
         unet_head_config:
-          target: unifolm_wma.models.diffusion_head.conditional_unet1d.ConditionalUnet1D
+          target: unifolm_wma_run.models.diffusion_head.conditional_unet1d.ConditionalUnet1D
           params:
             input_dim: ${model.params.agent_action_dim} 
             n_obs_steps: ${model.params.n_obs_steps_acting}
@@ -134,10 +134,10 @@ model:
             use_z_only: False
 
             obs_encoder_config:
-              target: unifolm_wma.models.diffusion_head.vision.multi_image_obs_encoder.MultiImageObsEncoder
+              target: unifolm_wma_run.models.diffusion_head.vision.multi_image_obs_encoder.MultiImageObsEncoder
               params:
                 rgb_model_config:
-                  target: unifolm_wma.models.diffusion_head.vision.model_getter.get_resnet
+                  target: unifolm_wma_run.models.diffusion_head.vision.model_getter.get_resnet
                   params:
                     name: resnet18
                     weights: null
@@ -152,7 +152,7 @@ model:
 
         ###################### Action Tokenization
         stem_process_config:
-          target: unifolm_wma.modules.encoders.condition.SATokenProjector
+          target: unifolm_wma_run.modules.encoders.condition.SATokenProjector
           params:
             dim: 1024
             depth: 1
@@ -164,7 +164,7 @@ model:
             chunk_size: ${model.params.wma_config.params.temporal_length}
 
     first_stage_config:
-      target: unifolm_wma.models.autoencoder.AutoencoderKL
+      target: unifolm_wma_run.models.autoencoder.AutoencoderKL
       params:
         embed_dim: 4
         monitor: val/rec_loss
@@ -187,18 +187,18 @@ model:
           target: torch.nn.Identity
 
     cond_stage_config:
-      target: unifolm_wma.modules.encoders.condition.FrozenOpenCLIPEmbedder
+      target: unifolm_wma_run.modules.encoders.condition.FrozenOpenCLIPEmbedder
       params:
         freeze: True
         layer: "penultimate"
 
     img_cond_stage_config:
-      target: unifolm_wma.modules.encoders.condition.FrozenOpenCLIPImageEmbedderV2
+      target: unifolm_wma_run.modules.encoders.condition.FrozenOpenCLIPImageEmbedderV2
       params:
         freeze: true
 
     image_proj_stage_config:
-      target: unifolm_wma.modules.encoders.resampler.Resampler
+      target: unifolm_wma_run.modules.encoders.resampler.Resampler
       params:
         dim: 1024
         depth: 4
@@ -221,13 +221,13 @@ model:
       action: 'min_max'
 
 data:
-  target: unifolm_wma.utils.data.DataModuleFromConfig
+  target: unifolm_wma_run.utils.data.DataModuleFromConfig
   params:
     batch_size: 8
     num_workers: 12
     wrap: False
     train:
-      target: unifolm_wma.data.wma_data.WMAData
+      target: unifolm_wma_run.data.wma_data.WMAData
       params:
         data_dir: '/path/to/training/dataset/directory'
         video_length: ${model.params.wma_config.params.temporal_length}
@@ -275,7 +275,7 @@ lightning:
         save_weights_only: True
         every_n_train_steps: 10000
     batch_logger:
-      target: unifolm_wma.utils.callbacks.ImageLogger
+      target: unifolm_wma_run.utils.callbacks.ImageLogger
       params:
         batch_frequency: 20000
         to_local: False

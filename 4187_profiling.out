@@ -1,0 +1,19 @@
+False
+Checking GPU Availability...
+Torch version: 2.9.1+rocm7.1.1.git351ff442
+Is ROCm/CUDA available?: False
+Device count: 0
+Traceback (most recent call last):
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/ASC1664/xformers /xformers/info.py", line 12, in <module>
+    from .ops.common import OPERATORS_REGISTRY
+  File "/mnt/ASC1664/xformers /xformers/ops/__init__.py", line 25, in <module>
+    from .modpar_layers import ColumnParallelLinear, RowParallelLinear
+  File "/mnt/ASC1664/xformers /xformers/ops/modpar_layers.py", line 15, in <module>
+    from .seqpar import sequence_parallel_leading_matmul, sequence_parallel_trailing_matmul
+  File "/mnt/ASC1664/xformers /xformers/ops/seqpar.py", line 10, in <module>
+    from torch.distributed.distributed_c10d import _resolve_process_group, GroupName
+ImportError: cannot import name 'GroupName' from 'torch.distributed.distributed_c10d' (/mnt/ASC1664/miniconda3/envs/unifolm-wma/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py)
